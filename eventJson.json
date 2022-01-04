@@ -1,0 +1,16 @@
+{
+  "start_date": "Jan 4 2022  10:16PM",
+  "end_date": "Jan 4 2022  10:17PM",
+  "summary": "Python meeting about calendaring",
+  "alert": [
+            {
+              "trigger": "Jan 4 2022  10:14PM",
+              "action": "email",
+              "attendee": "mailto:john_doe@example.com",
+              "summary": "Da da da otelul e viata mea",
+              "description": "A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the document template for the agenda file.",
+              "attach_type": "application/msword:http://example.com/templates/agenda.doc",
+              "repetitions": 2
+            }
+          ]
+}

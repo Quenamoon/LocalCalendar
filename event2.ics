@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//My calendar product//mxm.dk//
+VERSION:2.0
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20220104T213500Z
+DTSTAMP;VALUE=DATE:20050404T001000Z
+DTSTART;VALUE=DATE:20220104T213400Z
+PRIORITY:5
+SUMMARY:Python meeting about calendaring
+UID:20050115T101010/27346262376@mxm.dk
+END:VEVENT
+BEGIN:VALARM
+TRIGGER;RELATED=END:-P2D
+ACTION:EMAIL
+ATTENDEE:mailto:john_doe@example.com
+SUMMARY:*** REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING ***
+DESCRIPTION:A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the document template for the agenda file.
+ATTACH;FMTTYPE=application/msword:http://example.com/templates/agenda.doc
+END:VALARM
+END:VCALENDAR
