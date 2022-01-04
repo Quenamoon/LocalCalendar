@@ -10,16 +10,13 @@ utc = pytz.UTC
 
 
 class Logger:
-    f = None
-
-    def __init__(self):
-        super().__init__()
-        self.f = open('log.txt', 'w')
+    f = open('log.txt', 'a')
 
     def WriteMessage(self, message):
         now = datetime.now()
-        self.f.write(str(now))
+        self.f.write(str(now) + '\n')
         self.f.write(message)
+        self.f.flush()
 
 
 logger = Logger()
@@ -53,9 +50,10 @@ class ManageAlerts(Thread):
 
     def add_alert(self, alert, trigger_time):
         self.alerts.append([alert, trigger_time])
+        logger.WriteMessage("Added alert to alert list!\n")
 
     def run(self):
-        print("Hello Manager From Thread!")
+        logger.WriteMessage(".....Alert manager is now running......\n")
         while True:
             now = datetime.now().replace(tzinfo=utc)
             for alert in self.alerts:
@@ -69,10 +67,13 @@ manager.start()
 
 
 def IterateThroughFiles():
+    logger.WriteMessage("Iterating through files!")
     for file in os.listdir():
         if file.endswith(".ics"):
+            logger.WriteMessage("Found .ics files\n")
             ParseIcs(ReadEventFromFileIcs(file))
         if file.endswith(".json"):
+            logger.WriteMessage("Found .json files\n")
             ParseJson(ReadEventFromFileJson(file))
 
 
@@ -164,13 +165,15 @@ def ParseIcs(plain_text):
 
 def CreateAlert(event_date, event_end, trigger_time, repetitions, duration, action, attendee, description, summary,
                 attach_type):
-    print("Hello I am creating an alert!")
     alert = Alert("Alert! " + summary,
                   "Type: " + action + "\n" + description,
                   15,
                   repetitions)
+    logger.WriteMessage("Created an alert!\n")
     manager.add_alert(alert, trigger_time)
 
 
 if __name__ == '__main__':
+    logger.WriteMessage("----------------\nStarted tool\n----------------\n")
     IterateThroughFiles()
+    logger.WriteMessage("-----------------")

@@ -1,0 +1,51 @@
+2022-01-04 22:59:40.264560
+----------------
+Started tool
+----------------
+2022-01-04 22:59:40.280197
+Iterating through files!2022-01-04 22:59:40.342697
+Found .ics files
+2022-01-04 22:59:40.499770
+Created an alert!
+2022-01-04 22:59:40.515395
+Added alert to alert list!
+2022-01-04 22:59:40.515395
+Found .ics files
+2022-01-04 22:59:40.609556
+Created an alert!
+2022-01-04 22:59:40.640801
+Added alert to alert list!
+2022-01-04 22:59:40.640801
+Found .json files
+2022-01-04 22:59:41.080479
+Created an alert!
+2022-01-04 22:59:41.080479
+Added alert to alert list!
+2022-01-04 22:59:41.080479
+-----------------2022-01-04 23:00:23.043816
+.....Alert manager is now running......
+2022-01-04 23:00:23.059837
+----------------
+Started tool
+----------------
+2022-01-04 23:00:23.075471
+Iterating through files!2022-01-04 23:00:23.122386
+Found .ics files
+2022-01-04 23:00:23.216566
+Created an alert!
+2022-01-04 23:00:23.216566
+Added alert to alert list!
+2022-01-04 23:00:23.216566
+Found .ics files
+2022-01-04 23:00:23.232163
+Created an alert!
+2022-01-04 23:00:23.247786
+Added alert to alert list!
+2022-01-04 23:00:23.247786
+Found .json files
+2022-01-04 23:00:23.765944
+Created an alert!
+2022-01-04 23:00:23.797208
+Added alert to alert list!
+2022-01-04 23:00:23.797208
+-----------------
